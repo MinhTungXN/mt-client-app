@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{b2c/fragment/default.html}">
+<head>
+	<title>VU Fashion | Giỏ hàng</title>
+</head>
+<body>
+	<th:block layout:fragment="content">
+	    <!-- Breadcrumb Section Begin -->
+	    <th:block th:replace="b2c/fragment/category/breadcrumb"/>
+	    <!-- Breadcrumb Section End -->
+	
+	    <!-- Shop Section Begin -->
+	    <th:block th:replace="b2c/fragment/category/details"/>
+	    <!-- Shop Section End -->
+    </th:block>
+</body>
+</html>

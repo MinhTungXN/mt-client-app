@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{b2c/fragment/default.html}">
+<head>
+	<title>VU Fashion | Giới thiệu</title>
+</head>
+<body>
+	<th:block layout:fragment="content">
+	    <!-- Breadcrumb Section Begin -->
+	    <th:block th:replace="b2c/fragment/about/breadcrumb"/>
+	    <!-- Breadcrumb Section End -->
+	
+	    <!-- About Section Begin -->
+	    <th:block th:replace="b2c/fragment/about/details"/>
+	    <!-- About Section End -->
+	
+	    <!-- Testimonial Section Begin -->
+	    <th:block th:replace="b2c/fragment/about/testimonial"/>
+	    <!-- Testimonial Section End -->
+	
+	    <!-- Counter Section Begin (Giao dịch) -->
+	    <th:block th:replace="b2c/fragment/about/counters"/>
+	    <!-- Counter Section End -->
+	
+	    <!-- Team Section Begin -->
+	    <th:block th:replace="b2c/fragment/about/team"/>
+	    <!-- Team Section End -->
+	
+	    <!-- Client Section Begin -->
+	    <th:block th:replace="b2c/fragment/about/clients"/>
+	    <!-- Client Section End -->
+    </th:block>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<div xmlns:th="http://www.thymeleaf.org"
+     th:fragment="separate-branding-filter" class="card">
+     
+     <th:block th:switch="${#httpServletRequest.requestURI}">
+    	<th:block th:case="'/clothing'">
+    		<div class="card-heading">
+		        <a data-toggle="collapse" data-target="#collapseTwo">Clothing Brands</a>
+		    </div>
+		    <div id="collapseTwo" class="collapse show" data-parent="#accordionExample">
+		        <div class="card-body">
+		            <div class="shop__sidebar__brand">
+		                <ul>
+		                    <li th:each="clothingBrand : ${clothingBrands}">
+		                    	<a th:href="@{/{link}(link=${clothingBrand.link})}" 
+		                    	   th:text="${clothingBrand.name}">Louis Vuitton</a>
+		                   	</li>
+		                </ul>
+		            </div>
+		        </div>
+		    </div>
+    	</th:block>
+    	
+	  	<th:block th:case="'/shoes'">
+	  		<div class="card-heading">
+		        <a data-toggle="collapse" data-target="#collapseTwo">Shoe Brands</a>
+		    </div>
+		    <div id="collapseTwo" class="collapse show" data-parent="#accordionExample">
+		        <div class="card-body">
+		            <div class="shop__sidebar__brand">
+		                <ul>
+		                    <li th:each="shoeBrand : ${shoeBrands}">
+		                    	<a th:href="@{/{link}(link=${shoeBrand.link})}" 
+		                    	   th:text="${shoeBrand.name}">Louis Vuitton</a>
+		                   	</li>
+		                </ul>
+		            </div>
+		        </div>
+		    </div>
+	  	</th:block>
+	  	
+	  	<th:block th:case="'/accessories'">
+	  		<div class="card-heading">
+		        <a data-toggle="collapse" data-target="#collapseTwo">Accessory Brands</a>
+		    </div>
+		    <div id="collapseTwo" class="collapse show" data-parent="#accordionExample">
+		        <div class="card-body">
+		            <div class="shop__sidebar__brand">
+		                <ul>
+		                    <li th:each="accessoryBrand : ${accessoryBrands}">
+		                    	<a th:href="@{/{link}(link=${accessoryBrand.link})}" 
+		                    	   th:text="${accessoryBrand.name}">Louis Vuitton</a>
+		                   	</li>
+		                </ul>
+		            </div>
+		        </div>
+		    </div>
+	  	</th:block>
+    </th:block>
+</div>

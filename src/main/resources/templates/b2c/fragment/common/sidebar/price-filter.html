@@ -1,0 +1,20 @@
+<div xmlns:th="http://www.thymeleaf.org"
+     th:fragment="price-filter" class="card">
+    <div class="card-heading">
+        <a data-toggle="collapse" data-target="#collapseThree">Filter Price</a>
+    </div>
+    <div id="collapseThree" class="collapse show" data-parent="#accordionExample">
+        <div class="card-body">
+            <div class="shop__sidebar__price">
+                <ul>
+                    <li><a th:href="@{/filter(min='0',max='50000')}" >$0.00 - $50.00</a></li>
+                    <li><a th:href="@{/filter(min='50000',max='100000')}">$50.00 - $100.00</a></li>
+                    <li><a th:href="@{/filter(min='100000',max='150000')}">$100.00 - $150.00</a></li>
+                    <li><a th:href="@{/filter(min='150000',max='200000')}">$150.00 - $200.00</a></li>
+                    <li><a th:href="@{/filter(min='200000',max='250000')}">$200.00 - $250.00</a></li>
+                    <li><a th:href="@{/filter(min='250000',max=9999999)}">250.00+</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

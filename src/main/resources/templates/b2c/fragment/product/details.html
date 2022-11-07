@@ -1,0 +1,14 @@
+<section xmlns:th="http://www.thymeleaf.org"
+        th:fragment="details" class="shop spad">
+    <div class="container">
+        <div class="row">
+            <!-- SideBar Start -->
+		    <th:block th:replace="b2c/fragment/product/sidebar"/>
+		    <!-- SideBar End -->
+    
+            <!-- MainContent Start -->
+		    <th:block th:replace="b2c/fragment/product/content"/>
+		    <!-- MainContent End -->
+        </div>
+    </div>
+</section>

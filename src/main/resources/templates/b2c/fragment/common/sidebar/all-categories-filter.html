@@ -1,0 +1,21 @@
+<div xmlns:th="http://www.thymeleaf.org"
+     th:fragment="all-categories-filter" class="card">
+    <div class="card-heading">
+        <a data-toggle="collapse" data-target="#collapseOne">All Categories</a>
+    </div>
+    <div id="collapseOne" class="collapse show" data-parent="#accordionExample">
+        <div class="card-body">
+            <div class="shop__sidebar__categories">
+                <ul class="nice-scroll">	
+                	<!-- TODO: Will implement count product number each category -->
+                    <!-- li><a href="#">Men (20)</a></li-->
+                    
+                    <li th:each="category : ${categories}">
+                    	<a th:href="@{/{link}(link=${category.link})}" 
+                    	   th:text="${category.name}">Women (20)</a>
+                	</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

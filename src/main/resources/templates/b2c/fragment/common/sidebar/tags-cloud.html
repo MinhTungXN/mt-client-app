@@ -1,0 +1,15 @@
+<div xmlns:th="http://www.thymeleaf.org"
+     th:fragment="tags-cloud" class="card">
+    <div class="card-heading">
+        <a data-toggle="collapse" data-target="#collapseSix">Tags</a>
+    </div>
+    <div id="collapseSix" class="collapse show" data-parent="#accordionExample">
+        <div class="card-body">
+            <div class="shop__sidebar__tags">
+                <a th:href="@{/clothing}">Clothing</a>
+                <a th:href="@{/shoes}">Shoes</a>
+                <a th:href="@{/accessories}">Accessories</a>
+            </div>
+        </div>
+    </div>
+</div>

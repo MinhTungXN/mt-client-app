@@ -1,0 +1,40 @@
+<section xmlns:th="http://www.thymeleaf.org"
+        th:fragment="breadcrumb" class="breadcrumb-option">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+			    <th:block th:switch="${#httpServletRequest.requestURI}">
+			    	<th:block th:case="'/clothing'">
+			    		<div class="breadcrumb__text">
+		                    <h4>Clothing</h4>
+		                    <div class="breadcrumb__links">
+		                        <a th:href="@{/home}">Home</a>
+		                        <span>Clothing</span>
+		                    </div>
+		                </div>
+			    	</th:block>
+			    	
+				  	<th:block th:case="'/shoes'">
+				  		<div class="breadcrumb__text">
+		                    <h4>Shoes</h4>
+		                    <div class="breadcrumb__links">
+		                        <a th:href="@{/home}">Home</a>
+		                        <span>Shoes</span>
+		                    </div>
+		                </div>
+				  	</th:block>
+				  	
+				  	<th:block th:case="'/accessories'">
+				  		<div class="breadcrumb__text">
+		                    <h4>Accessories</h4>
+		                    <div class="breadcrumb__links">
+		                        <a th:href="@{/home}">Home</a>
+		                        <span>Accessories</span>
+		                    </div>
+		                </div>
+				  	</th:block>
+			    </th:block>
+            </div>
+        </div>
+    </div>
+</section>

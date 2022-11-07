@@ -1,0 +1,21 @@
+<div xmlns:th="http://www.thymeleaf.org" th:fragment="product-option"
+	class="shop__product__option">
+	<div class="row">
+		<div class="col-lg-6 col-md-6 col-sm-6">
+			<div class="shop__product__option__left">
+				<p>Showing 1–12 of 126 results</p>
+			</div>
+		</div>
+		<div class="col-lg-6 col-md-6 col-sm-6">
+			<div class="shop__product__option__right">
+				<form>
+					<p>Sort by Price:</p>
+					<select th:name="sort-by">
+						<option th:value="ascending">Low To High</option>
+						<option th:value="descending">High To Low</option>
+					</select>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

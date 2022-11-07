@@ -1,0 +1,5 @@
+insert into public.user (name, role_id, email, password, address, phone, avatar, remember_token, created_at, modified_at) values
+('Nguyễn Bá Minh Đạo', 1, 'daonguyen.dev@gmail.com', '$2a$10$aXGQKNTdX9.5E9zI2o/1zOy1MFBmHZ8owc6RaXJR89ymzx.CoLSMC', 'Hồ Chí Minh', '0908983906', 'avatar1.jpg', 'rAPHFeXDlQCjenQ6nffqe56hC9EulnyQTDKGzhuKjCIrVI4Cy0hWGEtsvJdA', '2019-06-21 19:26:24', '2019-06-30 09:13:12') -- password: Password1
+,('Nguyễn Minh Châu', 2, 'chaunguyen.user@gmail.com', '$2a$10$oztyYOzexbKMwNQi.xfE4uOVjKByoNiuAHKO9zL83LMA0czAXtP3.', 'Hồ Chí Minh', '0985678910', 'avatar1.jpg', 'sDh9x4HXrBCOJzgBH5qeZwcjVgN8Uv4u1WZBVQsYbp0moh7eDG260xJe07dF', '2019-06-21 21:55:28', '2019-07-03 08:37:34') -- password: 123456
+,('Nguyễn Văn Tèo', 2, 'teonguyen.user@gmail.com', '$2a$10$oztyYOzexbKMwNQi.xfE4uOVjKByoNiuAHKO9zL83LMA0czAXtP3.', 'Hồ Chí Minh', '0981234567', 'avatar1.jpg', '2iV7Lpa1sgCafdEOkbh2wVeYKamoc7kAb0CF6kAQJSVymts7g1uHZO9iUMI7', '2019-07-03 05:23:43', '2019-07-03 07:21:09') -- password: 123456
+;

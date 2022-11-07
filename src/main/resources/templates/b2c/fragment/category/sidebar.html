@@ -1,0 +1,36 @@
+<div xmlns:th="http://www.thymeleaf.org"
+     th:fragment="sidebar" class="col-lg-3">
+	<div class="shop__sidebar">
+		<!-- Search Form Start -->
+	    <th:block th:replace="b2c/fragment/common/search"/>
+	    <!-- Search Form End -->
+	    
+	    <div class="shop__sidebar__accordion">
+	        <div class="accordion" id="accordionExample">
+	            <!-- Categories Filter Start -->
+			    <th:block th:replace="b2c/fragment/common/sidebar/separate-categories-filter"/>
+			    <!-- Categories Filter End -->
+	    
+	            <!-- Branding Filter Start -->
+			    <th:block th:replace="b2c/fragment/common/sidebar/separate-branding-filter"/>
+			    <!-- Branding Filter End -->
+	            
+	            <!-- Price Filter Start -->
+			    <th:block th:replace="b2c/fragment/common/sidebar/price-filter"/>
+			    <!-- Price Filter End -->
+	            
+	            <!-- Size Filter Start -->
+			    <th:block th:replace="b2c/fragment/common/sidebar/size-filter"/>
+			    <!-- Size Filter End -->
+	            
+	            <!-- Color Filter Start -->
+			    <th:block th:replace="b2c/fragment/common/sidebar/color-filter"/>
+			    <!-- Color Filter End -->
+	            
+	            <!-- Tags Cloud Start -->
+			    <th:block th:replace="b2c/fragment/common/sidebar/tags-cloud"/>
+			    <!-- Tags Cloud End -->
+	        </div>
+	    </div>
+	</div>
+</div>

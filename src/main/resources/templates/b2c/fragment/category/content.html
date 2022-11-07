@@ -1,0 +1,23 @@
+<div xmlns:th="http://www.thymeleaf.org"
+     th:fragment="content" class="col-lg-9">
+    <!-- Product Option Start -->
+    <th:block th:replace="b2c/fragment/common/content/product-option"/>
+    <!-- Product Option End -->
+	    
+    <!-- Product Item Start -->
+    <th:block th:switch="${#httpServletRequest.requestURI}">
+    	<th:block th:case="'/clothing'" 
+    			  th:include="b2c/fragment/category/content/clothing-items"/>
+	  	<th:block th:case="'/shoes'" 
+    			  th:include="b2c/fragment/category/content/shoe-items"/>
+	  	<th:block th:case="'/accessories'" 
+    			  th:include="b2c/fragment/category/content/accessory-items"/>
+    	<th:block th:case="'/categories'" 
+    			  th:include="b2c/fragment/category/content/category-items"/>
+    </th:block>
+    <!-- Product Item End -->
+    
+    <!-- Product Pagination Start -->
+    <th:block th:replace="b2c/fragment/common/content/product-pagination"/>
+    <!-- Product Pagination End -->
+</div>

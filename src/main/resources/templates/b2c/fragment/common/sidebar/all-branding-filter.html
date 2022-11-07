@@ -1,0 +1,18 @@
+<div xmlns:th="http://www.thymeleaf.org"
+     th:fragment="all-branding-filter" class="card">
+    <div class="card-heading">
+        <a data-toggle="collapse" data-target="#collapseTwo">All Brands</a>
+    </div>
+    <div id="collapseTwo" class="collapse show" data-parent="#accordionExample">
+        <div class="card-body">
+            <div class="shop__sidebar__brand">
+                <ul>
+                    <li th:each="brand : ${brands}">
+                    	<a th:href="@{/{link}(link=${brand.link})}" 
+                    	   th:text="${brand.name}">Louis Vuitton</a>
+                   	</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

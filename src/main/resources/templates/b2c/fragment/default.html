@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+	<!-- Title -->
+	<title layout:title-pattern="$LAYOUT_TITLE - $CONTENT_TITLE"></title>
+	
+	<!-- Meta -->
+	<meta charset="UTF-8">
+    <meta name="author" content="VU School">
+    <meta name="description" content="Chào mừng đến với VU Shop">
+    <meta name="keywords" content="VU Shop, VU Store, VU Fashion">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+	<!-- Styles -->
+	<th:block th:replace="b2c/fragment/common/styles"/>
+</head>
+<body>
+	<!-- Page PreLoader -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Off Canvas Menu Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <th:block th:replace="b2c/fragment/common/canvas-menu"/>
+    <!-- Offcanvas Menu End -->
+
+    <!-- Header Section Begin -->
+    <th:block th:replace="b2c/fragment/common/header"/>
+    <!-- Header Section End -->
+
+    <!-- Main Content Begin -->
+    <th:block layout:fragment="content"/>
+    <!-- Main Content End -->
+
+    <!-- Footer Section Begin -->
+    <th:block th:replace="b2c/fragment/common/footer"/>
+    <!-- Footer Section End -->
+
+    <!-- Search Begin -->
+    <th:block th:replace="b2c/fragment/common/search"/>
+    <!-- Search End -->
+
+    <!-- Js Plugins -->
+    <th:block th:replace="b2c/fragment/common/scripts"/>
+</body>
+</html>

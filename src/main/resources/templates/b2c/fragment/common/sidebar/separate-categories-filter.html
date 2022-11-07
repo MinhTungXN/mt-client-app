@@ -1,0 +1,62 @@
+<div xmlns:th="http://www.thymeleaf.org"
+     th:fragment="separate-categories-filter" class="card">
+     
+     <th:block th:switch="${#httpServletRequest.requestURI}">
+    	<th:block th:case="'/clothing'">
+    		<div class="card-heading">
+		        <a data-toggle="collapse" data-target="#collapseOne">Clothing Categories</a>
+		    </div>
+		    <div id="collapseOne" class="collapse show" data-parent="#accordionExample">
+		        <div class="card-body">
+		            <div class="shop__sidebar__categories">
+		                <ul class="nice-scroll">
+		                    
+		                    <li th:each="clothingCategory : ${clothingCategories}">
+		                    	<a th:href="@{/{link}(link=${clothingCategory.link})}" 
+		                    	   th:text="${clothingCategory.name}">Women (20)</a>
+		                	</li>
+		                </ul>
+		            </div>
+		        </div>
+		    </div>
+    	</th:block>
+    	
+	  	<th:block th:case="'/shoes'">
+	  		<div class="card-heading">
+		        <a data-toggle="collapse" data-target="#collapseOne">Shoe Categories</a>
+		    </div>
+		    <div id="collapseOne" class="collapse show" data-parent="#accordionExample">
+		        <div class="card-body">
+		            <div class="shop__sidebar__categories">
+		                <ul class="nice-scroll">
+		                    
+		                    <li th:each="shoeCategory : ${shoeCategories}">
+		                    	<a th:href="@{/{link}(link=${shoeCategory.link})}" 
+		                    	   th:text="${shoeCategory.name}">Women (20)</a>
+		                	</li>
+		                </ul>
+		            </div>
+		        </div>
+		    </div>
+	  	</th:block>
+	  	
+	  	<th:block th:case="'/accessories'">
+	  		<div class="card-heading">
+		        <a data-toggle="collapse" data-target="#collapseOne">Accessory Categories</a>
+		    </div>
+		    <div id="collapseOne" class="collapse show" data-parent="#accordionExample">
+		        <div class="card-body">
+		            <div class="shop__sidebar__categories">
+		                <ul class="nice-scroll">
+		                    
+		                    <li th:each="accessoryCategory : ${accessoryCategories}">
+		                    	<a th:href="@{/{link}(link=${accessoryCategory.link})}" 
+		                    	   th:text="${accessoryCategory.name}">Women (20)</a>
+		                	</li>
+		                </ul>
+		            </div>
+		        </div>
+		    </div>
+	  	</th:block>
+    </th:block>
+</div>
