@@ -29,8 +29,12 @@ public class User extends Audit {
     private Role role;
 
     @NotBlank
-    @Column(name = EntityConstant.NAME_COLUMN, length = 200, nullable = false)
+    @Column(name = EntityConstant.FULLNAME_COLUMN, length = 200, nullable = false)
     private String name;
+    
+    @NotBlank
+    @Column(name = EntityConstant.USERNAME_COLUMN, length = 200, nullable = false)
+    private String username;
 
     @NotBlank
     @Column(name = EntityConstant.EMAIL_COLUMN, length = 50, nullable = false)
@@ -78,25 +82,21 @@ public class User extends Audit {
         super.setCreatedAt(createdAt);
     }
 
-    public User(Role role,
-                @NotBlank String name,
-                @NotBlank String email,
-                @NotBlank String password,
-                @NotBlank String address,
-                @NotBlank String phone,
-                @NotBlank String avatar,
-                @NotBlank String rememberToken) {
-        this.role = role;
-        this.name = name;
-        this.email = email;
-        this.password = password;
-        this.address = address;
-        this.phone = phone;
-        this.avatar = avatar;
-        this.rememberToken = rememberToken;
-    }
+	public User(Role role, @NotBlank String name, @NotBlank String username, @NotBlank String email,
+			@NotBlank String password, @NotBlank String address, @NotBlank String phone, @NotBlank String avatar,
+			@NotBlank String rememberToken) {
+		this.role = role;
+		this.name = name;
+		this.username = username;
+		this.email = email;
+		this.password = password;
+		this.address = address;
+		this.phone = phone;
+		this.avatar = avatar;
+		this.rememberToken = rememberToken;
+	}
 
-    public Long getId() {
+	public Long getId() {
         return id;
     }
 
@@ -119,6 +119,14 @@ public class User extends Audit {
     public void setName(String name) {
         this.name = name;
     }
+
+    public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
 
     public String getEmail() {
         return email;

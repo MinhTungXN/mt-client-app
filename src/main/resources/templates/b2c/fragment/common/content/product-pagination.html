@@ -2,11 +2,12 @@
      th:fragment="product-pagination" class="row">
     <div class="col-lg-12">
         <div class="product__pagination">
-            <span th:each="i: ${#numbers.sequence(1, totalPages)}">
-            	<a th:classappend="${currentPage}==${i-1}?'active':''"
-            	 th:href="@{${#httpServletRequest.requestURI} + '?page=' + ${i-1}}" 
-            	 th:text="${i}"></a>
-            </span>
+           <a th:classappend="${currentPage}==0?'active':''" 
+           th:href="@{${#httpServletRequest.requestURI} + '?page=0'}">1</a>
+           <a th:classappend="${currentPage}==1?'active':''" 
+           th:href="@{${#httpServletRequest.requestURI} + '?page=1'}">2</a>
+           <a th:classappend="${currentPage}==2?'active':''"
+           th:href="@{${#httpServletRequest.requestURI} + '?page=2'}">3</a>
         </div>
     </div>
 </div>

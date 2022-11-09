@@ -31,6 +31,8 @@ public class EntityConstant {
     public static final String MODIFIED_AT_COLUMN = "modified_at";
     public static final String ID_COLUMN = "id";
     public static final String NAME_COLUMN = "name";
+    public static final String USERNAME_COLUMN = "username";
+    public static final String FULLNAME_COLUMN = "fullname";
     
     public static final String PRICE_COLUMN = "price";
     public static final String IMAGE_COLUMN = "image";

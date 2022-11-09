@@ -68,27 +68,11 @@ public class MainController {
 
 	@GetMapping(value = { UrlConstant.B2C_SHOP_URL })
 	public String getB2CShopView(Model model,
-//			@RequestParam("order-by") String orderBy, 
 			@RequestParam("page") int curentPage,
 			@ModelAttribute(FormConstant.B2C_SEARCH_FORM) Optional<SearchForm> searchForm) {
 
 		Pageable paging = PageRequest.of(curentPage, ParameterConstant.PRODUCTS_ON_ONE_PAGE, 
 				Sort.by("createdAt").descending());
-
-//		switch (orderBy) {
-//		case "random":
-//			paging = PageRequest.of(page, ParameterConstant.PRODUCTS_ON_ONE_PAGE, 
-//					Sort.by("createdAt").descending());
-//			break;
-//		case "descending":
-//			paging = PageRequest.of(page, ParameterConstant.PRODUCTS_ON_ONE_PAGE, 
-//					Sort.by("price").descending());
-//			break;
-//		case "ascending":
-//			paging = PageRequest.of(page, ParameterConstant.PRODUCTS_ON_ONE_PAGE, 
-//					Sort.by("price").ascending());
-//			break;
-//		}
 
 		List<BrandDto> brands = brandService.getBrands();
 		List<CategoryDto> categories = categoryService.getCategories();
